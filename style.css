@@ -21,7 +21,27 @@ body {
 .hero h1 {
   font-size: 52px;
 }
+.cta {
+  margin-top: 30px;
+}
 
+.cta-btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  border: 1px solid #3b82f6;
+  background: rgba(59,130,246,0.1);
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: #3b82f6;
+  color: white;
+  transform: translateY(-2px);
+}
 .subtitle {
   color: #888;
   margin: 15px 0;
