@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Manrope', sans-serif;
+}
+
+body {
+  background: #0e0e0e;
+  color: white;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px 50px;
+  background: radial-gradient(circle at top, rgba(59,130,246,0.15), transparent 60%);
+}
+
+.hero h1 {
+  font-size: 52px;
+}
+
+.subtitle {
+  color: #888;
+  margin: 15px 0;
+}
+
+.description {
+  max-width: 600px;
+  margin: 0 auto 30px;
+  color: #aaa;
+}
+
+.contact-row {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #888;
+  font-size: 14px;
+}
+
+.contact-item i {
+  font-size: 16px;
+}
+
+a.contact-item {
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a.contact-item:hover {
+  color: #3b82f6;
+}
+
+.slider {
+  position: relative;
+  overflow: hidden;
+  padding: 60px 0 20px;
+}
+
+.controls {
+  position: absolute;
+  right: 20px;
+  top: 0;
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.controls button {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid #333;
+  color: white;
+  padding: 8px 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.controls button:hover {
+  border-color: #3b82f6;
+  background: rgba(59,130,246,0.15);
+}
+
+.track {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.8s cubic-bezier(0.22,1,0.36,1);
+  padding: 0 20px;
+}
+
+.slide {
+  width: 260px;
+  height: 260px;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+  border: 1px solid #222;
+  transition: all 0.35s ease;
+  text-decoration: none;
+  color: white;
+}
+
+.slide:hover {
+  border-color: #3b82f6;
+  transform: translateY(-4px);
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: linear-gradient(transparent, rgba(0,0,0,0.75));
+  transition: all 0.35s ease;
+}
+
+.overlay h3 {
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+.overlay p {
+  font-size: 13px;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.35s ease;
+  color: #ccc;
+  margin-top: 6px;
+}
+
+.slide:hover .overlay {
+  background: rgba(0,0,0,0.9);
+}
+
+.slide:hover h3 {
+  transform: translateY(-6px);
+}
+
+.slide:hover p {
+  opacity: 1;
+  max-height: 110px;
+  overflow-y: auto;
+}
+
+.overlay p::-webkit-scrollbar {
+  width: 4px;
+}
+
+.overlay p::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.2);
+  border-radius: 4px;
+}
+
+.highlight-card {
+  border: 1px solid #555;
+}
+.role {
+  font-size: 12px;
+  color: #3b82f6;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: all 0.3s ease;
+}
+
+.slide:hover .role {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (max-width: 768px) {
+  .slide {
+    width: 80%;
+    height: 260px;
+  }
+}
